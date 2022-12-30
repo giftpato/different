@@ -1,0 +1,407 @@
+/** fading out loading style  **/
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+.loads{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    position: relative;
+    padding: 5px;
+    margin-left: 5px;
+    border-radius: 50%;
+    animation: bounce  1.5s linear infinite;
+}
+
+.loads:nth-child(1){
+    animation-delay: .2s;
+    background: linear-gradient(purple, plum, pink);
+}
+
+.loads:nth-child(2){
+    animation-delay: .4s;
+    background: linear-gradient( plum,purple, pink)
+}
+
+.loads:nth-child(3){
+    animation-delay: .6s;
+    background: linear-gradient(plum, pink, purple)
+}
+
+.loads:nth-child(4){
+    animation-delay: .8s;
+    background: linear-gradient(purple, plum, pink)
+}
+
+.loads:nth-child(5){
+    animation-delay: 1s;
+    background: linear-gradient(purple, plum, pink)
+}
+
+@keyframes bounce{
+   0%, 100%{
+        transform: 0;
+    }
+    50%{transform: translateY(-30px);}
+
+    0%{
+        opacity: 0.0001;
+    }
+
+    100%{opacity: 1;}
+}
+
+/** nav bar style **/
+
+
+*{
+    font-size: 1.2rem;
+    font-family: roboto;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+nav{
+display: flex;
+background: black;
+color: white;
+justify-content: space-between;
+position: sticky;
+}
+
+nav h1{
+text-transform: capitalize;
+font-weight: bold;
+font-size: 2rem
+}
+
+nav ul{
+display: flex;
+justify-content: space-around;
+}
+
+nav ul li{
+letter-spacing: 1px;
+padding-left: 5px;
+padding-right: 5px;
+margin-right: 5px;
+text-transform: capitalize;
+color: white;
+}
+
+nav h1{
+padding: 10px 20px;
+}
+
+#mobile li:hover{
+    color: orange;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 960px) {
+nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 9999999;
+    
+}
+
+/**
+nav ul{
+    opacity: 0;
+    z-index: 9;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: -50px;
+    position: relative;
+}**/
+
+nav ul li{
+    padding: 10px;
+}
+
+#mobb{
+padding: 10px;
+}
+
+#mobb span{
+    background: orange;
+    width: 50px;
+    height: 5px;
+    border-radius: 4px;
+    display: block;
+    margin-top: 5px;
+}
+
+ .active span:nth-child(1){
+    transform:translateY(9px) rotate(45deg);
+}
+
+.active span:nth-child(2){
+    opacity: 0;
+}
+
+.active span:nth-child(3){
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+
+#btn{
+padding: 10px 20px;
+border: 2px solid white;
+border-radius: 4px;
+background: transparent;
+color: white;
+}
+
+
+.num{
+display: flex;
+flex-direction: column;
+width: max-content;
+position: absolute;
+top: 120px;
+opacity: 0;
+transition: all 2s ease;
+height: 50vh;
+z-index: -1;
+background: #131313;
+/**left: 400px;**/
+}
+
+.menu{
+    
+display: flex;
+flex-direction: column;
+width: max-content;
+position: absolute;
+top: 160px;
+opacity: 1;
+transition: all 2s ease;
+height: 50vh;
+z-index: 99999;
+background: black;
+}
+}
+
+#btn{
+padding: 5px 10px;
+border: 2px solid rgb(255, 250, 250);
+border-radius: 4px;
+color: white;
+display: flex;
+background: transparent;
+position: relative;
+transition: all .35s;
+}
+
+#btn::after{
+position:absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 100%;
+content: '';
+transition: all 0.35s;
+background: rgb(255, 166, 0);
+}
+
+#btn:hover::after{
+width: 100%;
+}
+
+#btn span{
+z-index: 99;
+}
+
+
+
+/********* the next generation ********/
+
+.next{
+    background: black;
+    width: 600px;
+    padding-left: 10px;
+    padding: 7px;
+    margin-top: 5px;
+    margin-left: 8px;
+}
+
+.next h1{
+    background: linear-gradient(purple, plum);
+   width: fit-content;
+   font-size: 2.5rem;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-transform: uppercase;
+}
+
+.next h2{
+    background: linear-gradient( plum, pink);
+    width: fit-content;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:  transparent;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+}
+
+.next p{
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+
+.next button{
+    padding: 5px 20px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background: transparent;
+    color: white;
+    position: relative;
+    display: flex;
+    transition: all .35s ease-in-out;
+}
+
+.next button::after{
+    height: 100%;
+    background:rgb(255, 166, 0);
+    width: 0;
+    position: absolute;
+    content:'';
+    transition: all .35s ease-in-out;
+    top:0;
+    left: 0;
+}
+
+.next button:hover::after{
+    width: 100%;
+}
+
+.next button a{
+    z-index: 1;
+}
+
+/** camel **/
+.camel{
+    display: block;
+}
+
+.camel2{
+    display: flex;
+}
+
+/** next-side **/
+.nnext{
+    display: flex;
+    justify-content: flex;
+}
+
+.next-side{
+    background: black;
+    width: 287px;
+    height: 400px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding: 5px 10px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.next-img{
+    width: 287px;
+    height: 350px;
+    position: relative;
+    opacity: .7;
+    transition: all .4s ease-in-out;
+}
+
+.next-img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.next-side button{
+    position: relative;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 4px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: center;
+}
+
+.next-side button a{
+    z-index: 1;
+}
+
+.next-side button::after{
+    left:0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    background-color: orange;
+    content:'';
+    transition: all .35s ease-in-out;
+}
+
+.next-side button:hover::after{
+    width: 100%;
+}
+
+
+/** footer section style **/
+
+footer{
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+footer ul h2{
+    text-transform: capitalize;
+    background: linear-gradient(plum, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer ul li{
+    text-transform: capitalize;
+}
